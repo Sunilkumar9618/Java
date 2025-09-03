@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+
+class Game {
+    String title;
+
+    public Game(String title) {
+        this.title = title;
+    }
+
+    public void startGame() {
+        System.out.println("Game: " + title);
+        System.out.println("Game Started...");
+    }
+}
+
+
+class AdventureDivision extends Game {
+    int maps;
+
+    public AdventureDivision(String title, int maps) {
+        super(title);
+        this.maps = maps;
+    }
+
+    public void exploreMaps() {
+        System.out.println("Exploring " + maps + " adventurous maps...");
+    }
+}
+
+class TreasureHuntTeam extends AdventureDivision {
+    int cluesFound;
+    int cluesRequired;
+
+    public TreasureHuntTeam(String title, int maps, int cluesFound, int cluesRequired) {
+        super(title, maps);
+        this.cluesFound = cluesFound;
+        this.cluesRequired = cluesRequired;
+    }
+
+    public void playGame() {
+        startGame();
+        exploreMaps();
+        System.out.println("Collected " + cluesFound + " clues.");
+        if (cluesFound >= cluesRequired) {
+            System.out.println("Treasure Unlocked! You Win!");
+        } else {
+            System.out.println("Not enough clues! Try Again!");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        String title = sc.nextLine();
+        int maps = sc.nextInt();
+        int cluesFound = sc.nextInt();
+        int cluesRequired = sc.nextInt();
+
+        
+        TreasureHuntTeam game = new TreasureHuntTeam(title, maps, cluesFound, cluesRequired);
+        game.playGame();
+
+        sc.close();
+    }
+}

@@ -1,0 +1,6 @@
+Q1) Write a java program to perform Simple calculation program.
+
+Q2)Write a java program to find the sum of array without adding the  min and max elements
+
+Q3)Write a java program to find the next perfect square the integer and output will be integer
+        

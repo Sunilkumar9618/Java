@@ -1,0 +1,99 @@
+import java.util.*;
+
+public class One {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        if (n < 1 || n > 20) {
+            System.out.println("Invalid input: Number of entries must be between 1 and 20.");
+            return;
+        }
+
+        Map<String, Integer> batsmen = new LinkedHashMap<>();
+        for (int i = 0; i < n; i++) {
+            String name = sc.next();
+            int centuries = sc.nextInt();
+
+            if (centuries < 0) {
+                System.out.println("Invalid input: Centuries or wickets cannot be negative.");
+                return;
+            }
+            if (batsmen.containsKey(name)) {
+                System.out.println("Invalid input: Duplicate player names are not allowed.");
+                return;
+            }
+            batsmen.put(name, centuries);
+        }
+
+        int m = sc.nextInt();
+        if (m < 1 || m > 20) {
+            System.out.println("Invalid input: Number of entries must be between 1 and 20.");
+            return;
+        }
+
+        Map<String, Integer> bowlers = new LinkedHashMap<>();
+        for (int i = 0; i < m; i++) {
+            String name = sc.next();
+            int wickets = sc.nextInt();
+
+            if (wickets < 0) {
+                System.out.println("Invalid input: Centuries or wickets cannot be negative.");
+                return;
+            }
+            if (bowlers.containsKey(name)) {
+                System.out.println("Invalid input: Duplicate player names are not allowed.");
+                return;
+            }
+            bowlers.put(name, wickets);
+        }
+
+        // Read update command
+        System.out.print("Update ");
+        String updateName = sc.next();
+        int extraCenturies = sc.nextInt();
+
+        if (!batsmen.containsKey(updateName)) {
+            System.out.println("Player not found");
+            return;
+        } else {
+            batsmen.put(updateName, batsmen.get(updateName) + extraCenturies);
+        }
+
+        System.out.print("Remove ");
+        String removeName = sc.next();
+
+        if (!bowlers.containsKey(removeName)) {
+            System.out.println("Player does not exist.");
+            return;
+        } else {
+            bowlers.remove(removeName);
+        }
+
+        System.out.println("Batsmen and their Centuries:");
+        for (Map.Entry<String, Integer> entry : batsmen.entrySet()) {
+            System.out.println(entry.getKey() + " -> " + (updateName.equals(entry.getKey()) ? entry.getValue() - extraCenturies : entry.getValue()));
+        }
+        System.out.println();
+        System.out.println("Bowlers and their Wickets:");
+        for (Map.Entry<String, Integer> entry : bowlers.entrySet()) {
+            if (!entry.getKey().equals(removeName)) {
+                System.out.println(entry.getKey() + " -> " + entry.getValue());
+            }
+        }
+
+        // Print after changes
+        System.out.println("\nAfter Update and Removal:\n");
+        System.out.println("Batsmen:");
+        for (Map.Entry<String, Integer> entry : batsmen.entrySet()) {
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        }
+        System.out.println();
+        System.out.println("Bowlers:");
+        for (Map.Entry<String, Integer> entry : bowlers.entrySet()) {
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        }
+
+        sc.close();
+    }
+}

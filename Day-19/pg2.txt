@@ -1,0 +1,39 @@
+//Multiple
+interface  Father{
+    default void fatherprop(){
+        System.out.println("father Properties");
+    }
+}
+interface Mother  {
+    default void motherprop(){
+        System.out.println("mother Properties");
+    }
+}
+class Child implements Father,Mother {
+    
+    public void fatherprop(){
+        System.out.println("Child using Father Properties");
+        Father.super.fatherprop();
+    }
+    
+    public void motherprop(){
+        System.out.println("Child using Mothe Properties");
+        Mother.super.motherprop();
+    }
+    
+    void childprop(){
+        System.out.println("Child  Own Properties");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Child c1=new Child();
+		
+		c1.fatherprop();
+		c1.motherprop();
+		
+		c1.childprop();
+		
+	}
+}

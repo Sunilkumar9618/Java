@@ -1,0 +1,21 @@
+import java.util.*;
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the price of dozen banana: ");
+        float a=sc.nextFloat();
+        System.out.println("Enter the amount of Sells each banana: ");
+        float b=sc.nextFloat();
+        float z=f2*12;
+        if(z>=f1){
+            System.out.println("Profit"+(z-f1));
+        }
+        else{
+            System.out.println("Loss"+(f1-z));
+        }
+        
+        sc.close();
+    }
+}
+

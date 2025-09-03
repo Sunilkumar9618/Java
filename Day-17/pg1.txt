@@ -1,0 +1,29 @@
+import java.util.map;
+import java.util.HashMap;
+public class Main{
+public static void main(String[] args){
+HashMap<String, Integer> map=new HashMap<>();
+map.put("Tom",123);
+map.put("Clint",90);
+map.put('Jason",876);
+System.out.println("HashMap: "+map);
+System.out.println("Roll no Jason : "+map.get("Jason"));
+System.out.println("Check Chris: "+map.containsKey("Chris));
+map.remove("Clint");
+System.out.println("Remove Clint: "+map);
+System.out.println("HashMap String Values: ");
+for(String key:map.keySet()){
+System.out.println(key);
+}
+System.out.println("HashMap Integer Values: ");
+for(Integer key:map.keySet()){
+System.out.println(key);
+}
+System.out.println("Hash Map Key-value pairs:");
+for(Map.Entry<String, Integer>entry:map.entrySet()){
+System.out.println(entry.getKey()+"->"+entry.getValue()
+}
+sc.close();
+}
+
+}

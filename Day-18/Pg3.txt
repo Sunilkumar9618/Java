@@ -1,0 +1,56 @@
+import java.util.*;
+class Car{//class defining
+    String type;
+    String brand;
+    String model;
+    int year;
+    
+    void display(){
+    System.out.println("Car Type : "+type);
+  System.out.println("Car Brand : "+brand);
+        System.out.println("Car model : "+model);
+      System.out.println("Car year : "+year);
+        
+    }
+}
+class EvCar extends Car{
+    String battery;
+    void  displays(){
+        display();
+
+        System.out.println("Battery capacity: "+battery);
+    }  
+}
+
+class Child extends EvCar{
+    int autopilotversion;
+  void alldisplay(){
+    display();
+    displays();System.out.println("autopilotversion: "+autopilotversion);
+        
+  }
+}
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        Child e1=new Child();
+        //Car c1= new Car() ;//creating object for car class
+        
+        System.out.println("Enter the car type: ");
+        e1.type=sc.nextLine();
+        System.out.println("Enter the car brand: ");
+        e1.brand=sc.nextLine();
+        System.out.println("Enter the car model: ");
+        e1.model=sc.nextLine();
+        System.out.println("Enter the year: ");
+        e1.year=sc.nextInt();
+        sc.nextLine();
+        System.out.println("Enter the batterycapacity: ");
+        e1.battery=sc.nextLine();
+        System.out.println("Enter the Autopilot version: ");
+        e1.autopilotversion=sc.nextInt();
+        
+       e1.alldisplay();
+        sc.close();
+    }
+}

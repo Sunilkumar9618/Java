@@ -1,0 +1,36 @@
+import java.util.*;
+class Grandfather{
+    String a;
+     void display(){
+     System.out.print("Grandfathers property:" +a);
+     }
+}
+class Father extends Grandfather{
+    String b;
+    void display1(){
+        display();
+         System.out.print("Fathers addition:" +b);
+    }
+}
+class Son extends Father{
+    String c;
+    void dispaly2(){
+        display1();
+         System.out.print("Sons addition:" +c);
+    }
+}
+public class Main{
+    public static void main(String[] args){
+    Scanner sc=new Scanner(System.in);
+    Son d = new Son();
+    
+    d.a=sc.nextLine();
+    
+    d.b=sc.nextLine();
+    
+    d.c=sc.nextLine();
+    
+    d.display2();
+    sc.close();
+    }
+}

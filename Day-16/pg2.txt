@@ -1,0 +1,52 @@
+import java.util.Scanner;
+import java.util.Vector;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		Vector<Integer> numbers=new Vector<>();
+		
+		System.out.println("Enter Number of Elements :");
+		int n=sc.nextInt();
+		
+		System.out.println("Enter  Elements :");
+		for(int i=0;i<n;i++){
+		    numbers.add(sc.nextInt());
+		}
+		
+		System.out.println("Vector Elements: "+numbers);
+		
+		//update element 
+// 		System.out.println("Enter index value :");
+// 		int index=sc.nextInt();
+		
+// 		System.out.println("Enter index value :");
+// 		int element=sc.nextInt();
+		
+// 		if(index>=0 && index<numbers.size()){
+// 		    numbers.set(index,element);
+// 		}
+// 		System.out.println("Vector Elements: "+numbers);
+		
+// 		System.out.println("Enter index value to remove  :");
+// 		int Remove=sc.nextInt();
+// 		numbers.remove(Remove);
+// 		System.out.println("Vector Elements: "+numbers);
+		
+		//search
+		System.out.println("Enter Value to search");
+		int searchValue=sc.nextInt();
+		if(numbers.contains(searchValue)){
+		    System.out.println("Element found ");
+		}
+		else{
+		    System.out.println("Element Not Found");
+		}
+		System.out.println("First Element : "+numbers.firstElement());
+		System.out.println("Last Element : "+numbers.lastElement());
+		numbers.clear();
+		System.out.println("Vector Elements: "+numbers);
+	}
+	
+}

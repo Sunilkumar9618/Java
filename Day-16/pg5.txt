@@ -1,0 +1,55 @@
+import java.util.*;
+
+public class MeritListManager {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        int n = sc.nextInt();
+        TreeSet<Integer> meritList = new TreeSet<>();
+
+        
+        for (int i = 0; i < n; i++) {
+            meritList.add(sc.nextInt());
+        }
+
+        
+        int removeScore = sc.nextInt();
+
+        
+        int checkScore = sc.nextInt();
+
+        
+        int specificScore = sc.nextInt();
+
+        
+        int rangeStart = sc.nextInt();
+        int rangeEnd = sc.nextInt();
+
+        
+        System.out.println("Initial Merit List: " + meritList);
+
+        
+        meritList.remove(removeScore);
+        System.out.println("After Removing " + removeScore + ": " + meritList);
+
+        
+        System.out.println("Is " + checkScore + " present? " + meritList.contains(checkScore));
+
+      
+        System.out.println("Lowest Score: " + meritList.first());
+        System.out.println("Highest Score: " + meritList.last());
+
+     
+        System.out.println("Score just below " + specificScore + ": " + meritList.lower(specificScore));
+        System.out.println("Score just above " + specificScore + ": " + meritList.higher(specificScore));
+
+      
+        System.out.println("Scores in range " + rangeStart + " to " + rangeEnd + ": " +
+                meritList.subSet(rangeStart, true, rangeEnd, true));
+
+      
+        meritList.clear();
+        System.out.println("Final Merit List after clearing: " + meritList);
+    }
+}

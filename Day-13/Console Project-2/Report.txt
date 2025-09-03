@@ -1,0 +1,101 @@
+TITLE : BANK APP
+CONSOLE PROJECT-2 
+
+
+DESCRIPTION:-
+This is a simple bank app, were i was using a simple Java programming language to build it,
+In this program were i used a simple condition 
+and switch cases, the inputs and operations 
+Were only get from users only, the functions 
+are we can able to (Deposit, check bank balance,
+Withdraw, and Exit).
+
+
+CONSTRAINTS 
+1.	Importing libraries 
+2.	Get the input from users 
+3.	with the help of switch cases functions are written 
+4.	output will be generated 
+
+
+OUTPUT:-
+
+Welcome to Simple Bank!
+Enter your name: Alice
+Enter account number: 12345
+Account created successfully!
+
+========= MENU =========
+D. Deposit
+W. Withdraw
+C. Check Balance
+E. Exit
+Enter your choice: d
+Enter amount to deposit: 1000
+Amount deposited successfully!
+
+========= MENU =========
+D. Deposit
+W. Withdraw
+C. Check Balance
+E. Exit
+Enter your choice: w
+Enter amount to withdraw: 500
+Amount withdrawn successfully!
+
+========= MENU =========
+D. Deposit
+W. Withdraw
+C. Check Balance
+E. Exit
+Enter your choice: c
+Current Balance: ₹500.0
+
+========= MENU =========
+D. Deposit
+W. Withdraw
+C. Check Balance
+E. Exit
+Enter your choice: e
+Thank you for using the bank application.
+
+
+Welcome to Simple Bank!
+Enter your name: Ravi
+Enter account number: 2002
+Account created successfully!
+
+========= MENU =========
+D. Deposit
+W. Withdraw
+C. Check Balance
+E. Exit
+Enter your choice: d
+Enter amount to deposit: 1000
+Amount deposited successfully!
+
+========= MENU =========
+D. Deposit
+W. Withdraw
+C. Check Balance
+E. Exit
+Enter your choice: w
+Enter amount to withdraw: 1500
+Invalid amount or insufficient balance.
+
+========= MENU =========
+D. Deposit
+W. Withdraw
+C. Check Balance
+E. Exit
+Enter your choice: c
+Current Balance: ₹1000.0
+
+========= MENU =========
+D. Deposit
+W. Withdraw
+C. Check Balance
+E. Exit
+Enter your choice: e
+Thank you for using the bank application.
+

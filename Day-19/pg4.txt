@@ -1,0 +1,27 @@
+import java.util.*;
+import java.util.Scanner;
+class Midpoint{
+    int x1;
+    int x2;
+    int y1;
+    int y2;
+    void dispaly(){
+       // a=((x1+x2)/2);
+        //b=((y1+y2)/2);
+        System.out.println("(x1+x2)/2"+"((y1+y2)/2)");
+    }
+} 
+public class Ajay{
+    public static void main(String[] args){
+    Scanner sc=new Scanner(System.in);
+    Midpoint r =new Midpoint();
+     
+     r.x1=sc.nextInt();
+     r.x2=sc.nextInt();
+     r.y1=sc.nextInt();
+     r.y2=sc.nextInt();
+     
+     r.display();
+     sc.close();
+}
+}

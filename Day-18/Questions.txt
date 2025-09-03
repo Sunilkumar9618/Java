@@ -1,0 +1,94 @@
+Q1)Write a java program to create a double class and call the class and get the input from the user and print it.
+Enter the car brand: 
+Tata
+Enter the car model: 
+altroz
+Enter the year: 
+2025
+Car Brand : Tata
+Car model : altroz
+Car year : 2025
+
+
+SINGLE INHERITENCE
+Q2) Write a java program to create a Single inheritence class and call the class and get the input from the user and print it. 
+Output:-
+Enter the car type: 
+Ev
+Enter the car brand: 
+tesla
+Enter the car model: 
+s plaid
+Enter the year: 
+2022
+Enter the batterycapacity: 
+50000mah
+Car Type : Ev
+Car Brand : tesla
+Car model : s plaid
+Car year : 2022
+Battery capacity: 50000mah
+
+
+MULTIPLE INHERITENCE
+
+Q3) Write a java program to create a Multiple inheritence class and call the class and get the input from the user and print it. 
+
+Output:
+Enter the car type: 
+EV
+Enter the car brand: 
+Tesla
+Enter the car model: 
+Cyber truck
+Enter the year: 
+2024
+Enter the batterycapacity: 
+50000mah
+Enter the Autopilot version: 
+4
+Car Type : EV
+Car Brand : Tesla
+Car model : Cyber truck
+Car year : 2024
+Car Type : EV
+Car Brand : Tesla
+Car model : Cyber truck
+Car year : 2024
+Battery capacity: 50000mah
+Autopilotversion: 4
+
+
+Q4)USECASE
+Grandfather Raman was a wealthy man who owned fertile agricultural land.
+He worked hard all his life to grow crops and maintain the land.
+When he grew old, the property was passed on to his son Suresh.
+Suresh expanded the land by building a beautiful farmhouse.
+He also planted fruit orchards, making the land more valuable.
+Years later, Suresh handed over the property to his son Arjun.
+Arjun, being tech-savvy, built a modern villa on the land.
+He also installed solar panels to make the property eco-friendly.
+This way, each generation added something valuable to the inheritance.
+The family’s legacy continued to grow through three generations.
+
+Test Case 1
+Input:
+Raman's Land
+Green Farmhouse
+Modern Villa with Solar Panels
+
+Output:
+Grandfather's Property: Raman's Land
+Father's Addition: Green Farmhouse
+Son's Addition: Modern Villa with Solar Panels
+
+Test Case 2
+Input:
+Shiv's Mango Orchard
+Luxury Farmhouse
+Glass Villa with Wind Turbines
+
+Output:
+Grandfather's Property: Shiv's Mango Orchard
+Father's Addition: Luxury Farmhouse
+Son's Addition: Glass Villa with Wind Turbines

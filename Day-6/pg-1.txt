@@ -1,0 +1,12 @@
+Public class Number
+{
+Public static void main(
+String[]args){
+Int p=new Scanner(System.in).nextInt();
+Int n=2;
+for(int i=0;i<=p;i++)
+{
+n=n+(i*13);
+System.out.print(n+" ");
+}
+}

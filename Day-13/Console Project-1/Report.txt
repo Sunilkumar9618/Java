@@ -1,0 +1,30 @@
+TITLE : CALCULATOR
+CONSOLE PROJECT-1
+
+DESCRIPTION:-
+In  this Console Project , I was using a JAVA  programming language to perform operations,
+Were I am using (If ,else if  and Switch Case conditions) to perform  simple basic calculator operations 
+Like(Addition, Subtraction, Multiplication, Division, Remainder, XOR) operations , were the inputs and
+Operations are get from only users  . 
+
+Constraints:-
+
+1.	Get the inputs from user
+2.	Get the type and operation type
+3.	It checks the given input is which type and perform operations
+4.	Prints the output
+
+
+Output:-
+Enter first value: 5
+Enter second value: 2
+Enter operation : +
+Result: 7
+
+
+Enter first value: 5.5
+Enter second value: 2.0
+ Enter operation: *
+Result: 11.0
+
+

@@ -1,0 +1,5 @@
+1) Write a java program for inserting value at the end of the array
+2) Write a java program for inserting value at the starting of the array
+3) Write a java program for Inserting element in the any place of the array
+4) Write a java program for to delete a array element using a index position
+5) Write a java program for deletion and insertion in a array

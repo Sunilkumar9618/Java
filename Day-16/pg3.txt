@@ -1,0 +1,83 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Vector<String> flowers = new Vector<>();
+        System.out.print("Enter the Size of elements: ");
+        int n = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Enter the flower names: ");
+        for (int i = 0; i < n; i++) {
+            flowers.add(sc.nextLine());
+        }
+        System.out.print("Enter number of operations to perform: ");
+        int q = sc.nextInt();
+        sc.nextLine();
+        for (int i = 0; i < q; i++) {
+            System.out.print("Enter operation: ");
+            String[] parts = sc.nextLine().split(" ");
+            String cmd = parts[0].toUpperCase();
+
+            switch (cmd) {
+                case "ADD":
+                    flowers.add(parts[1]);
+                    break;
+
+                case "INSERT": {
+                    int index = Integer.parseInt(parts[1]);
+                    if (index >= 0 && index <= flowers.size()) {
+                        flowers.add(index, parts[2]);
+                    }
+                    break;
+                }
+
+                case "UPDATE": {
+                    int index = Integer.parseInt(parts[1]);
+                    if (index >= 0 && index < flowers.size()) {
+                        flowers.set(index, parts[2]);
+                    }
+                    break;
+                }
+
+                case "REMOVE":
+                    flowers.remove(parts[1]);
+                    break;
+
+                case "SEARCH":
+                    if (flowers.contains(parts[1])) {
+                        System.out.println("Found");
+                    } else {
+                        System.out.println("Not Found");
+                    }
+                    break;
+
+                case "DISPLAY":
+                    for (int j = 0; j < flowers.size(); j++) {
+                        System.out.print(flowers.get(j));
+                        if (j != flowers.size() - 1) System.out.print(" ");
+                    }
+                    System.out.println();
+                    break;
+
+                case "COUNT":
+                    System.out.println(flowers.size());
+                    break;
+
+                case "RETRIEVE": {
+                    int index = Integer.parseInt(parts[1]);
+                    if (index >= 0 && index < flowers.size()) {
+                        System.out.println(flowers.get(index));
+                    }
+                    break;
+                }
+
+                default:
+                    System.out.println("Invalid operation");
+            }
+        }
+
+        
+
+        sc.close();
+    }
+}

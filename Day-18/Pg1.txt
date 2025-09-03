@@ -1,0 +1,27 @@
+import java.util.*;
+class Car{//class defining
+    String brand;
+    String model;
+    int year;
+    
+    void display(){
+        System.out.println("Car Brand : "+brand);
+        System.out.println("Car model : "+model);
+        System.out.println("Car year : "+year);
+        
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        Car c1= new Car() ;//creating object for car class
+        System.out.println("Enter the car brand: ");
+        c1.brand=sc.nextLine();
+        System.out.println("Enter the car model: ");
+        c1.model=sc.nextLine();
+        System.out.println("Enter the year: ");
+        c1.year=sc.nextInt();
+        c1.display();
+        sc.close();
+    }
+}
