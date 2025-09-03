@@ -1,0 +1,23 @@
+import java.util.*;
+class Calculator{
+   Float add(Float a,Float b){
+       return a+b;
+   }
+   double add(double a, double b){
+       return a+b;
+   } 
+
+}
+
+public class Main{
+    public static void main (String[] args){
+        Scanner sc= new Scanner(System.in);
+        Calculator c=new Calculator();
+        
+        
+        System.out.printf("The Addition of two numbers:"+d.add(sc.nextFloat(),sc.nextFloat()));
+        System.out.printf("The Addition of two numbers:"+d.add(sc.nextdouble(),sc.nextdouble()));
+        sc.close();
+    }
+}
+

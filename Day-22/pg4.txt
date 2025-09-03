@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+// Abstract class representing a StockExchange
+abstract class StockExchange {
+    int portfolioShares = 0;
+
+    abstract void buy(String company, int quantity);
+    abstract void sell(String company, int quantity);
+}
+
+// NSE implementation of StockExchange
+class NSE extends StockExchange {
+
+    @Override
+    void buy(String company, int quantity) {
+        portfolioShares += quantity;
+        System.out.println("Bought " + quantity + " shares of " + company + " via NSE.");
+        System.out.println("Total Shares in Portfolio: " + portfolioShares);
+    }
+
+    @Override
+    void sell(String company, int quantity) {
+        portfolioShares -= quantity;
+        System.out.println("Sold " + quantity + " shares of " + company + " via NSE.");
+        System.out.println("Total Shares in Portfolio: " + portfolioShares);
+    }
+}
+
+// Main class to simulate investor actions
+public class StockMarket {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read input
+        String action = sc.nextLine().trim().toLowerCase();
+        String company = sc.nextLine().trim();
+        int quantity = sc.nextInt();
+
+        // Create exchange and perform action
+        StockExchange exchange = new NSE();
+
+        if (action.equals("buy")) {
+            exchange.buy(company, quantity);
+        } else if (action.equals("sell")) {
+            exchange.sell(company, quantity);
+        } else {
+            System.out.println("Invalid action.");
+        }
+
+        sc.close();
+    }
+}

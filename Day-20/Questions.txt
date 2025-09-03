@@ -1,0 +1,109 @@
+Polymorphism it means many forms
+*it allows one interface to be used for a general class of actions , the specific action is determined weather exact nature of the situation
+*a single function operator or object can behave differently in different situations 
+*types of polymorphism
+- Run time polymorphism(method over riding/dynamic binding)
+- Compile time polymorphism(method over loading / static binding)
+1)Method over loading:-
+*multiple methods with the same name but different parameter list
+*the return type may be same or different but parameter must be different
+*it has to be done with in the same class
+*it helps in code readability and flexibility 
+2)Method over riding:-
+*A sub class re defining a method already present in the parent class
+*the method name, return type, parameter list or parameter same in both child classes
+*it helps in achieving dynamic behaviour and code reusability  
+
+
+
+Q1) Write  a java program using  polymorphism(Method overloading) for adding two numbers as float and double for two value 
+
+Q2) Write  a java program using  polymorphism(Method overloading) for adding two numbers as float and double, for three value 
+
+Q3)\\Usecase
+Once upon a time, there was a restaurant 🍴 where a chef could cook the same dish in different ways.
+If a customer ordered 2 ingredients (like rice and curry), the chef prepared a simple meal.
+If someone gave 3 ingredients (rice, curry, and chicken), the chef made a special meal 🍗.
+And if a customer gave two special items like juices (double values), the chef blended them into a drink 🥤.
+Although the dish name was always "CookFood", the way it was prepared changed with ingredients.
+This is exactly how method overloading works — same method name but different parameter lists.
+In Java, the method name cookFood() can be written many times but with different arguments.
+The compiler decides at compile-time which version of the method to call.
+So the chef (like the compiler) knows which dish to prepare depending on the input type and number.
+Thus, Method Overloading makes the program (or restaurant 🍽) more flexible and user-friendly.
+
+Input Format
+First line: Enter two integers (like 5 10 → rice + curry).
+Second line: Enter three integers (like 2 4 6 → rice + curry + chicken).
+Third line: Enter two doubles (like 3.5 2.5 → juice blending).
+
+Output Format
+Print sum of two integers (represents simple meal).
+Print sum of three integers (represents special meal).
+Print sum of two doubles (represents juice).
+
+Test Cases 
+Input-1:
+5 10
+2 4 6
+3.5 2.5
+
+Output-1:
+Simple Meal (2 items): 15
+Special Meal (3 items): 12
+Juice Mix (2 drinks): 6.0
+
+Input-2:
+8 12
+10 20 30
+4.5 5.5
+
+
+Output-2:
+Simple Meal (2 items): 20
+Special Meal (3 items): 60
+Juice Mix (2 drinks): 10.0
+
+ Q4) Usecase
+The parent class Car had a method called race(), which simply said "Car is racing" 🚗.
+Different car companies joined the race with their own unique racing styles.
+A Ferrari  overrode the race() method to say "Ferrari races with blazing speed" 🏎.
+A Lamborghini  overrode it to say "Lamborghini races with roaring power" 🔥.
+A Tesla ⚡ overrode it to say "Tesla races silently with electric power" 🔋.
+Even though the method name was always race(), the behavior changed at runtime.
+The race announcer (like the JVM) didn’t know in advance which car’s style would appear.
+When the cars came on track, the JVM decided at runtime which race() to execute.
+Thus, Method Overriding allowed each car to show its own racing personality, while still following the same rule: race() .
+
+Input Format
+First line: Enter the number of cars (n).
+Next n lines: Each line contains a car name (Ferrari, Lamborghini, Tesla, or Car).
+
+Output Format
+For each car entered, print its racing style using the race() method.
+
+Test Case 1
+Input:
+3
+Ferrari
+Lamborghini
+Tesla
+
+Output:
+Ferrari races with blazing speed 
+Lamborghini races with roaring power 
+Tesla races silently with electric power 
+
+Test Case 2
+Input:
+2
+Car
+Ferrari
+
+Output:
+Car is racing 
+Ferrari races with blazing speed
+
+
+
+Q5)Write a java program to find the animal sounds using method overloading.

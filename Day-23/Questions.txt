@@ -1,0 +1,5 @@
+MySQL
+
+Q1) create a table name empid, the columns are designation and salary after creating alter the table and add hike column
+ and if salary up to or equal to 1lakh hike is 4and if salary was less than 1.5lakh 1lakh the hike is 6,if salary is higher than 1.5lakh hike is 10 if salary was less than 1lakh hike is 0. 
+

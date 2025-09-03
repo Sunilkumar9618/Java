@@ -1,0 +1,64 @@
+import java.util.*;
+
+class Racing {
+    void race() {
+        System.out.println("Car is racing");
+    }
+}
+
+class Lamborghini extends Racing {
+    @Override
+    void race() {
+        System.out.println("Lamborghini races with roaring power");
+    }
+}
+
+class Ferrari extends Racing {
+    @Override
+    void race() {
+        System.out.println("Ferrari races with blazing speed");
+    }
+}
+
+class Tesla extends Racing {
+    @Override
+    void race() {
+        System.out.println("Tesla races silently with electric power");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the number of cars:");
+        int n = sc.nextInt();
+        sc.nextLine(); 
+        System.out.println("Enter the car names: ");
+        ArrayList<String> cars = new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            String carName = sc.nextLine().toLowerCase();
+            cars.add(carName);
+        }
+
+        for (String car : cars) {
+            Racing b = null;
+            if (car.contains("lamborghini")) {
+                b = new Lamborghini();
+            } else if (car.contains("ferrari")) {
+                b = new Ferrari();
+            } else if (car.contains("tesla")) {
+                b = new Tesla();
+            } else if (car.contains("car")) {
+                b = new Racing();
+            } else {
+                System.out.println("The car " + car + " does not exist");
+                continue;
+            }
+
+            b.race();
+        }
+
+        sc.close();
+    }
+}

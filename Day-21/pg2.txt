@@ -1,0 +1,49 @@
+import java.util.*;
+
+class Employee{
+    public int ID;
+    private String Name;
+    private Float Salary;
+        
+    public int getID(){
+        return ID;
+    }    
+    public String getName(){
+        return Name;
+    }
+    public Float getSalary(){
+        return Salary;
+    }
+    public void setID(int ID){
+        this.ID=ID;
+    }
+    public void setName(String Name){
+        this.Name=Name;
+    }
+    public void setSalary(Float Salary){
+        if(Salary<0){
+            System.out.println("The salary is invalid ");
+        }
+        else{
+            this.Salary=Salary;
+            
+        }
+    }
+}
+public class Main{
+    public static void main (String[] args){
+        Scanner sc=new Scanner(System.in);
+        Employee s=new Employee();
+        System.out.print("Enter the employee ID: ");
+        s.setID(sc.nextInt());
+        sc.nextLine();
+        System.out.print("Enter the Employee Name: ");
+        s.setName(sc.nextLine());
+        System.out.print("Enter the Employee Salary: ");
+        s.setSalary(sc.nextFloat());
+        System.out.println("Employee ID: "+s.getID());
+        System.out.println("Employee Name: "+s.getName());
+        System.out.println("Employee Salary: "+s.getSalary());
+        sc.close();
+    }
+}

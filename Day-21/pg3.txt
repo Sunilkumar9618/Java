@@ -1,0 +1,71 @@
+import java.util.*;
+
+class Bank {
+    public int Accno;              
+    public String Name;            
+    private double Balance;        
+
+    
+    public int getAccno() {
+        return Accno;
+    }
+    public String getName() {
+        return Name;
+    }
+    public double getBalance() {
+        return Balance;
+    }
+
+   
+    public void setAccno(int Accno) {
+        this.Accno = Accno;
+    }
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+    
+    public void setDeposit(double Deposit) {
+        if (Deposit > 0) {
+            Balance += Deposit;
+            System.out.println("Deposited: " + Deposit);
+        } else {
+            System.out.println("Invalid Deposit Amount");
+        }
+    }
+
+    public void setWithdraw(double Withdraw) {
+        if (Withdraw > Balance) {
+            System.out.println("Insufficient Balance! Withdrawal Failed");
+        } else if (Withdraw > 0) {
+            Balance -= Withdraw;
+            System.out.println("Withdrawn: " + Withdraw);
+        } else {
+            System.out.println("Invalid Withdrawal Amount");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Bank b = new Bank();
+        System.out.print("Enter the Account Number: ");
+        b.setAccno(sc.nextInt());
+        System.out.print("Enter the Account Holder Name: ");
+        sc.nextLine(); 
+        b.setName(sc.nextLine());
+        System.out.print("Enter the Deposit Amount: ");
+        double depositAmount = sc.nextDouble();
+        System.out.print("Enter the Withdraw Amount: ");
+        double withdrawAmount = sc.nextDouble();
+        sc.close();
+        System.out.println("--------------------------------------------------------------------");
+        System.out.println("Account Number: " + b.getAccno());
+        System.out.println("Account Holder: " + b.getName());
+        b.setDeposit(depositAmount);
+        b.setWithdraw(withdrawAmount);
+        System.out.println("Current Balance: " + b.getBalance());
+    }
+}
+
+

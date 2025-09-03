@@ -1,0 +1,26 @@
+//Method Overloading
+import java.util.*;
+class Calculator{
+    int add(int a, int b){
+       return a+b; 
+    }
+    
+    int add(int a, int b, int c ){
+        return a+b+c;
+    }
+    
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    Calculator co=new Calculator();
+	  
+	    int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+	    System.out.println(co.add(a,b));//arg method 
+	    System.out.println(co.add(a,b,c));//arg method 
+		
+	}
+}

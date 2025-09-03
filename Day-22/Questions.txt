@@ -1,0 +1,92 @@
+Abstraction:-
+it is a process of hiding the internal implementation details and showing only the essential features of an object.
+it focusses on what an object does not how it does it.
+it is achieved by using abstract classes and interfaces in java.
+it helps in reducing complexity and increases code reusability and security.
+abstract keyword is used to define a class / object.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      features                        abstraction                                                                               interface
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+      keyword                         abstract                                                                                 interface
+      method                          abstraction has method with body(also without body)            all methods are abstract by default(till java 7), after it we have static methods. 
+      variables                       we have instant variable                                                                 declare variables as public,static, final.
+      inheritance                     class can abstract only one class                                                        multiple inheritance.
+      access modifiers                public, protected-                                                                       public
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q1) Write a java program and print the values using a abstraction.
+
+Q2) Write a java program and print the values using a Interface.
+
+Q3)Description
+In a bank, customers only interact with simple services like depositing money, withdrawing money, and checking balance. They don’t need to know the internal process of how the bank stores the money, updates databases, or manages transactions.
+Initial Balance is 5000
+
+Here, abstraction is used. The bank provides an abstract class Bank with abstract methods like deposit(), withdraw(), and checkBalance(). Different banks like SBI or HDFC implement these methods in their own way, but for the customer, the interface remains the same.
+
+This hides the complex implementation details from the user and only shows the essential functionalities.
+
+Input Format
+First line: Bank name (e.g., SBI)
+Second line: Operation (e.g., deposit or withdraw)
+Third line: Amount
+
+Output Format
+Display the result of the operation with the updated balance.
+
+Test Case 1
+Input:
+deposit
+2000
+
+Output:
+Deposited: 2000
+Current Balance: 7000
+
+Test Case 2
+Input:
+withdraw
+6000
+
+Q4)Description
+In the stock market, investors focus only on buying and selling shares.
+They don’t see the complex backend where trades are matched and recorded.
+For them, the platform simply shows actions like Buy, Sell, and Check Portfolio.
+This is abstraction — hiding how the system works, showing only what is needed.
+Different exchanges like NSE or BSE implement these actions in their own way.
+One may charge extra brokerage, while another may offer discounts.
+Yet, for the investor, the interface remains the same: buy, sell, and check.
+Thus, abstraction makes the stock market simple and user-friendly despite its complexity.
+
+Input Format
+First line → Action (buy or sell)
+Second line → Company name (e.g., TCS)
+Third line → Quantity of shares
+
+Output Format
+Show the result of the action (Bought/Sold shares).
+Show the updated total portfolio shares.
+
+Test Case 1
+Input:
+buy
+INFOSYS
+40
+
+
+Output:
+Bought 40 shares of INFOSYS via NSE.
+Total Shares in Portfolio: 40
+
+Test Case 2
+Input:
+sell
+INFOSYS
+20
+
+
+Output:
+Sold 20 shares of INFOSYS via NSE.
+Total Shares in Portfolio: 20

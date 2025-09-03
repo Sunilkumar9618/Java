@@ -1,0 +1,22 @@
+import java.util.*;
+class Food{
+    int items (int a, int b){
+    return a+b;
+    }
+    int items (int a, int b, int c){
+        return a+b;
+    }
+    double items (double a, double b){
+        return a+b;
+    }
+}
+public class Main{
+    public static void main(String[] args){
+    Scanner sc=new Scanner(System.in);
+    Food z=new Food();
+    System.out.println("Simple Meal (2 items)"+z.items(sc.nextInt(),sc.nextInt() ));
+    System.out.println("Special Meal (3 items) "+z.items(sc.nextInt(),sc.nextInt(),sc.nextInt() ));
+    System.out.println("Juice Mix (2 drinks)"+z.items(sc.nextDouble(),sc.nextDouble() ));
+    sc.close();
+    }
+}

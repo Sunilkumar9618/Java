@@ -1,0 +1,45 @@
+import java.util.*;
+
+//encapsulation
+
+class Student{
+    private String Name;
+    private int age;
+    
+    //getter for Name
+    public String getName(){
+    return Name;
+
+    
+    }
+    public int getage(){
+    return age;
+    
+    }
+    //setter for Name
+    public void setName(String Name){
+        this.Name=Name;
+    }
+    public void setage(int age){
+        if(age<1){
+            System.out.println("The age is invalid");
+            System.exit(0);
+        }
+        else{
+        this.age=age;
+        }
+    }
+}
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        Student s=new Student();
+        System.out.print("Enter the Name: ");
+        s.setName(sc.nextLine());
+        System.out.print("Enter the age: ");
+        s.setage(sc.nextInt());
+        System.out.println("Name :"+s.getName());
+                System.out.println("Age :"+s.getage());
+                sc.close();
+    }
+}

@@ -1,0 +1,71 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+
+class Animal{
+    void sound(){
+        System.out.println("Animal makes a sound");
+    }
+
+}
+class Dog extends Animal{
+    @Override
+    void sound(){
+        System.out.println("Barks");
+    }
+}
+class Cat extends Animal{
+    @Override
+    void sound(){
+        System.out.println("meow");
+    }
+}
+class Lion extends Animal{
+    @Override
+    void sound(){
+        System.out.println("Roars");
+    }
+}
+public class r {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in); 
+        System.out.print("Enter number of animals:");
+        int n  = sc.nextInt();
+        System.out.println("Enter the animal name");
+        String a;
+        sc.nextLine();
+        Animal b=null;
+        ArrayList<String> bb = new ArrayList<>();
+        for(int i=0;i<n;i++){
+        
+         a = sc.nextLine().toLowerCase();
+         bb.add(a);
+        
+        if(a.equals("cat")){
+            b = new Cat();
+        }
+        else if(a.equals("lion")){
+            b = new Lion();
+        }
+        else if(a.equals("dog")){
+            b= new Dog();
+
+            
+        }
+        else if(a.equals("animal")){
+            b= new Animal();
+        }
+        else{
+            System.err.println("it is not an animal");
+        }
+        if(b != null){
+        b.sound();
+        }
+    }
+        sc.close();
+    
+    }
+    
+}
+
