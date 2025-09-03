@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		long year=sc.nextLong();
+		year=Math.abs(year);
+		while (!((year % 4 == 0 && year % 100 != 0 && year % 400 == 0))){
+		    year++;
+		}
+		System.out.println(year);
+	}
+}

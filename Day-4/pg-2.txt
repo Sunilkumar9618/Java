@@ -1,0 +1,21 @@
+import java.util.*;
+public class Two{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        // int div = 0;
+        // for (int i = 1; i <=n ; i++) {
+        //     if(n%i==0) div++;
+        // }
+        // System.out.println(div==2?"Prime Product":"Regular Product");
+        boolean flag = true;
+        for(int i=2; i<n/2; i++){
+            if(n%i==0){
+                flag=false;
+                break;
+            }
+        }
+        System.out.println(flag?"Prime Product":"Regular Product");
+        sc.close();
+    }
+}

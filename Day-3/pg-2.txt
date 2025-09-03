@@ -1,0 +1,12 @@
+import java.util.*;
+public class Second{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String tem = sc.nextLine();
+        if(tem.toLowerCase().equals("scissor")) System.out.println("Rock");
+        else if (tem.toLowerCase().equals("paper")) System.out.println("Scissor"); 
+        else if (tem.toLowerCase().equals("rock")) System.out.println("Paper"); 
+        else System.out.println("Invalid Input"); 
+        sc.close();
+    }
+}

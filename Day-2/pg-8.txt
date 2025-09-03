@@ -1,0 +1,14 @@
+import java.util.*;
+public class Eight
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        sc.nextLine();
+        int b = sc.nextInt();
+        int team = a/b;
+        int rem = a%b;
+        System.out.printf("The number of students in each team is %d and left out is %d",team,rem);
+        sc.close();
+    }
+}

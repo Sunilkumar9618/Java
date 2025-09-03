@@ -1,0 +1,18 @@
+import java.util.*;
+public class Sixth{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a = 0;
+        int b = 1;
+        System.out.print(a+" ");
+        while(n>0){
+            int temp = b;
+            b = b + a;
+            a = temp;
+            System.out.print(a+" ");
+            n--;
+        }
+        sc.close();
+    }
+}

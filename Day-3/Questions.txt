@@ -1,0 +1,184 @@
+Q1
+Temperature Check for Outdoor Activities
+You are organizing an outdoor event and need to decide whether it's safe 
+for participants to go outside based on the current temperature. Temperatures 
+below zero degrees Celsius are considered too cold and unsafe, while temperatures 
+above zero are suitable for outdoor activities. Write a program to check if the 
+given temperature is positive or negative.
+Input Format
+A single integer input representing the current temperature in degrees Celsius.
+Output Format
+If the given temperature is positive, print "Safe for outdoor activities."
+If the temperature is negative or zero, print "Too cold for outdoor activities."
+Constraints
+The temperature can be any integer (positive, negative, or zero).
+Example 1
+Sample Input 1
+15
+Sample Output 1
+Safe for outdoor activities
+Explanation
+The given temperature is 15 degrees Celsius, which is above zero. Hence, the output 
+is "Safe for outdoor activities."
+Example 2
+Sample Input 2
+-5
+Sample Output 2
+Too cold for outdoor activities
+Explanation
+The given temperature is -5 degrees Celsius, which is below zero. Hence, the output 
+is "Too cold for outdoor activities."
+Example 3
+Sample Input 2
+0
+Sample Output 3
+Too cold for outdoor activities
+Explanation
+The temperature is zero degrees Celsius, which is not suitable for outdoor activities.
+Hence, the output is "Too cold for outdoor activities."
+
+
+
+Q2
+Rock, Paper, Scissors
+Two players A and B, are playing the game of Rock, Paper, Scissors. Player A chooses a
+move represented by a string value M: and the move can be one of the following: ‘rock’, 
+‘paper’, or 'scissors' where,
+rock beats scissors
+scissors beats paper
+paper beats rock
+Your task is to find and return a string value representing the winning move for Player B.
+Note
+The output is case sensitive
+Input Format
+Input1: A string value M representing the move chosen by Player A
+Output Fomat
+Return a string representing the winning move for Player B.
+Sample Input
+Input1:rock
+Sample Output
+Paper
+Explanation
+Here, Player A chooses rock. The winning move for Player B is 'paper, as 'paper' 
+beats 'rock' in the game of Rock, Paper, Scissors Hence, paper is returned as the output.
+
+
+
+Q3.
+Joey's Quest for the Trendy Meatball Sandwich
+Joey Tribbiani, a huge fan of sandwiches, spots an irresistible offer at his favorite sandwich shop. 
+The shop promises free sandwiches for life to anyone who can identify whether a given number is a "Trendy Number." 
+Joey, excited at the prospect, wants to check various numbers to see if they qualify. A "Trendy Number" is defined 
+as a 3-digit number where the middle digit is divisible by 3. Can you help Joey write a program that determines 
+whether a given number is a "Trendy Number"?
+Write a program that takes an integer n as input and checks the following:
+If the number is not a 3-digit number, it should print "Invalid Number".
+If the number is a 3-digit number and its middle digit is divisible by 3, it should print "Trendy Number".
+If the number is a 3-digit number but its middle digit is not divisible by 3, it should print "Not a Trendy Number".
+Input Format
+A single integer, n, representing the given number.
+Output Format
+Print "Trendy Number" if the input satisfies the trendy number conditions.
+Print "Not a Trendy Number" if it’s a 3-digit number but doesn’t satisfy the middle-digit divisibility rule.
+Print "Invalid Number" if the input number is not a 3-digit number.
+Example 1
+Sample Input 1
+791
+Sample Output 1
+Trendy Number
+Explanation
+The input number 791 is a 3-digit number, and its middle digit 9 is divisible by 3, making it a "Trendy Number."
+Example 2
+Sample Input 2
+275
+Sample Output 2
+Not a Trendy Number
+Explanation
+The input number 275 is a 3-digit number, but its middle digit 7 is not divisible by 3, so it’s "Not a Trendy Number".
+Example 3
+Sample Input 3
+45
+Sample Output 3
+Invalid Number
+Explanation
+The input number 45 is not a 3-digit number, so the output is "Invalid Number".
+
+
+
+Q4.
+Car Rental Charges for a Travel Agency
+Imagine you're organizing a trip for a group of tourists, and you've partnered with a local travel agency to provide car rentals 
+for the journey. The travel agency has a pricing policy where they charge differently for the first few hours of travel and then 
+increase the hourly rate after a specified number of hours.
+Your task is to calculate the total cost for a given travel time in minutes. The travel agency charges:
+R1 rupees per hour for the first N hours of travel.
+R2 rupees per hour for any additional time after the first N hours.
+You need to compute the total cost based on the total travel time (in minutes) provided as input.
+Input Format
+The first line contains an integer R1, representing the charge (in rupees) per hour for the first N hours.
+The second line contains an integer N, representing the number of hours for which the first rate R1 applies.
+The third line contains an integer R2, representing the charge (in rupees) per hour for additional hours after the first N hours.
+The fourth line contains an integer X, representing the total travel time in minutes.
+Output Format
+Output the total traveling cost in rupees.
+Example 1
+Sample Input 1
+20
+4
+40
+300
+Sample Output 1
+120
+Explanation
+Total travelling hours = 300÷60=5 hours (since we convert 300 minutes to hours).
+Rupees 20/hour for the first 4 hours: 20×4=80 rupees.
+Rupees 40/hour for the remaining 1 hour: 40×1=40 rupees.
+Total cost = 80+40=120rupees.
+Example 2
+Sample Input 2
+30
+5
+35
+500
+Sample Output 2
+290
+Explanation
+Total travelling hours = 500÷60=8.33 hours. The ceiling of 8.33 is 9 hours.
+Rupees 30/hour for the first 5 hours: 30×5=150 rupees.
+Rupees 35/hour for the remaining 4 hours: 35×4=140 rupees.
+Total cost = 150+140=290 rupees.
+
+
+
+
+Q5.
+Write a java program to print the given number is even or odd without using % Operator
+
+
+
+
+Q6.
+Ask a user for their birth year encoded as two digits (like "62") and for the current year, 
+also encoded as two digits (like "99"). Write a program to find the users current age in years.
+Input format:
+Input consists of 2 integers
+he first integer corresponds to the last 2 digits of the birth year
+The second integer corresponds to the last 2 digits of the current year
+Output format:
+Print the user's current age
+Refer below sample output for formatting.
+Sample Input:
+62
+00
+Sample Output:
+38
+Input (stdin)
+30
+23
+Output (stdout)
+93
+Input (stdin)
+50
+20
+Output (stdout)
+70

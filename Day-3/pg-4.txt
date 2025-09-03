@@ -1,0 +1,13 @@
+import java.util.*;
+public class Third{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int tem = sc.nextInt();
+        if(tem<100 && tem>999) System.out.println("Invalid number");
+        else{
+            if(((tem%100)/10)%3==0) System.out.println("Trendy number");
+            else System.out.println("Not a trendy number");
+        }
+        sc.close();
+    }
+}

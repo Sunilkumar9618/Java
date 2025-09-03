@@ -1,0 +1,22 @@
+import java.util.*;
+import java.lang.Math;
+public class Six
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        sc.nextLine();
+        int b = sc.nextInt();
+        sc.nextLine();
+        int c = sc.nextInt();
+        sc.nextLine();
+        float r = sc.nextFloat();
+        int square = a*a;
+        int rectangle = c*b;
+        float circle = (float)Math.PI*r*r;
+        System.out.println(square);
+        System.out.println(rectangle);
+        System.out.printf("%.2f",circle);
+        sc.close();
+    }
+}
